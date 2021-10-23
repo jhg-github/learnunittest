@@ -5,9 +5,10 @@ extern "C"
 	/*
 	 * Add your c-only include files here
 	 */
+    #include "module1.h"
 }
 
-TEST_GROUP(MyCode)
+TEST_GROUP(MyFirstTestGroup)
 {
     void setup()
     {
@@ -18,8 +19,8 @@ TEST_GROUP(MyCode)
     }
 };
 
-TEST(MyCode, test1)
+TEST(MyFirstTestGroup, test1)
 {
-
+    LONGS_EQUAL(1, module1_func1());
 }
 
