@@ -27,7 +27,7 @@ endif
 # SRC_FILES += example-src/Example.c
 # SRC_DIRS += example-platform
 # SRC_DIRS += example-src
-SRC_DIRS += my_src
+SRC_DIRS += ../src/my_src
 
 # --- TEST_SRC_FILES and TEST_SRC_DIRS ---
 # Test files are always included in the build.
@@ -62,7 +62,7 @@ INCLUDE_DIRS += $(CPPUTEST_HOME)/include/Platforms/Gcc
 # INCLUDE_DIRS += example-fff
 # INCLUDE_DIRS += tests/exploding-fakes
 # INCLUDE_DIRS += tests/fff
-INCLUDE_DIRS += my_inc
+INCLUDE_DIRS += ../src/my_inc
 
 
 # --- CPPUTEST_OBJS_DIR ---

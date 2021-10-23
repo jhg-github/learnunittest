@@ -1,0 +1,27 @@
+Making clean
+rm -f rename_me_tests rename_me_tests.exe test-lib/librename_me.a rename_me.map.txt test-obj/my_src/module1.o test-obj/tests/MyFirstTest.o test-obj/tests/AllTests.o  gcov_output.txt gcov_report.txt gcov_report.txt.html gcov_error.txt test-obj/my_src/module1.gcda test-obj/tests/MyFirstTest.gcda test-obj/tests/AllTests.gcda test-obj/my_src/module1.gcno test-obj/tests/MyFirstTest.gcno test-obj/tests/AllTests.gcno rename_me_tests.txt test-obj/my_src/module1.d test-obj/tests/MyFirstTest.d test-obj/tests/AllTests.d     cpputest_*.xml junit_run_output
+rm -rf gcov test-obj test-lib
+find . -name "*.gcno" | xargs rm -f
+find . -name "*.gcda" | xargs rm -f
+compiling MyFirstTest.cpp
+mkdir -p test-obj/tests/
+g++ -Wno-c++14-compat --std=c++11 -Wno-c++98-compat-pedantic -Wno-c++98-compat -g -Wall -Werror -Wfatal-errors -Wswitch-default -Wno-format-nonliteral -Wno-sign-conversion -Wno-pedantic -Wno-shadow -Wno-missing-field-initializers -Wno-unused-parameter  -include /home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include/CppUTest/MemoryLeakDetectorNewMacros.h  -Wall -Werror -Wfatal-errors -Wswitch-default -Wno-format-nonliteral -Wno-sign-conversion -Wno-pedantic -Wno-shadow -Wno-missing-field-initializers -Wno-unused-parameter -include /home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include/CppUTest/MemoryLeakDetectorMallocMacros.h  -I/home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include  -Imy_inc    -c -MMD -MP -o test-obj/tests/MyFirstTest.o tests/MyFirstTest.cpp
+compiling AllTests.cpp
+mkdir -p test-obj/tests/
+g++ -Wno-c++14-compat --std=c++11 -Wno-c++98-compat-pedantic -Wno-c++98-compat -g -Wall -Werror -Wfatal-errors -Wswitch-default -Wno-format-nonliteral -Wno-sign-conversion -Wno-pedantic -Wno-shadow -Wno-missing-field-initializers -Wno-unused-parameter  -include /home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include/CppUTest/MemoryLeakDetectorNewMacros.h  -Wall -Werror -Wfatal-errors -Wswitch-default -Wno-format-nonliteral -Wno-sign-conversion -Wno-pedantic -Wno-shadow -Wno-missing-field-initializers -Wno-unused-parameter -include /home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include/CppUTest/MemoryLeakDetectorMallocMacros.h  -I/home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include  -Imy_inc    -c -MMD -MP -o test-obj/tests/AllTests.o tests/AllTests.cpp
+compiling module1.c
+mkdir -p test-obj/my_src/
+cc -pedantic -Wno-missing-prototypes -Wno-strict-prototypes -g   -Wall -Werror -Wfatal-errors -Wswitch-default -Wno-format-nonliteral -Wno-sign-conversion -Wno-pedantic -Wno-shadow -Wno-missing-field-initializers -Wno-unused-parameter -include /home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include/CppUTest/MemoryLeakDetectorMallocMacros.h  -I/home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/include  -Imy_inc    -c -MMD -MP -o test-obj/my_src/module1.o my_src/module1.c
+Building archive test-lib/librename_me.a
+mkdir -p test-lib/
+ar rvc test-lib/librename_me.a test-obj/my_src/module1.o
+a - test-obj/my_src/module1.o
+ranlib test-lib/librename_me.a
+Linking rename_me_tests
+g++ -o rename_me_tests test-obj/tests/MyFirstTest.o test-obj/tests/AllTests.o test-lib/librename_me.a /home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/lib/libCppUTest.a /home/javi/github_projects/learnunittest/tdd_cpputest/cpputest/lib/libCppUTestExt.a  -g 
+START_TIME=1635014052
+rm -f test-obj/my_src/module1.gcda test-obj/tests/MyFirstTest.gcda test-obj/tests/AllTests.gcda gcov_output.txt gcov_report.txt gcov_error.txt ; echo "Running rename_me_tests"; ./rename_me_tests 
+Running rename_me_tests
+.
+OK (1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 0 ms)
+
