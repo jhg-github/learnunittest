@@ -6,6 +6,7 @@ COMPONENT_NAME = rename_me
 
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
+CPPUTEST_HOME = cpputest
 ifeq "$(CPPUTEST_HOME)" ""
 $(error The environment variable CPPUTEST_HOME is not set. \
 Set it to where cpputest is installed)
