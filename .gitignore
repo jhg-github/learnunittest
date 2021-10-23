@@ -53,3 +53,4 @@ dkms.conf
 /cubeide_cpputest/.settings/
 /cubeide_cpputest/Debug/
 /tdd_cpputest/cpputest-starter-project/rename_me_tests
+/tdd_cpputest/cpputest-starter-project/current_build.txt

@@ -21,6 +21,6 @@ TEST_GROUP(MyFirstTestGroup)
 
 TEST(MyFirstTestGroup, test1)
 {
-    LONGS_EQUAL(2, module1_func1());
+    LONGS_EQUAL(1, module1_func1());
 }
 
