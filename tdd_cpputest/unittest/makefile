@@ -6,11 +6,13 @@ COMPONENT_NAME = binary
 
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
-CPPUTEST_HOME = cpputest	# I added this to put cpputest inside unittest folder
+# I add this here to set CPPUTEST_HOME env. variable
+CPPUTEST_HOME:=$(PWD)/cpputest
 ifeq "$(CPPUTEST_HOME)" ""
 $(error The environment variable CPPUTEST_HOME is not set. \
 Set it to where cpputest is installed)
 endif
+
 
 # --- SRC_FILES and SRC_DIRS ---
 # Production code files are compiled and put into
