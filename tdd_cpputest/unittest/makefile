@@ -6,7 +6,7 @@ COMPONENT_NAME = binary
 
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
-CPPUTEST_HOME = cpputest
+CPPUTEST_HOME = cpputest	# I added this to put cpputest inside unittest folder
 ifeq "$(CPPUTEST_HOME)" ""
 $(error The environment variable CPPUTEST_HOME is not set. \
 Set it to where cpputest is installed)
