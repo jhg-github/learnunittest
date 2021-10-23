@@ -39,7 +39,8 @@ SRC_DIRS += ../src/my_src
 # TEST_SRC_DIRS, builds everything in the directory
 
 # TEST_SRC_FILES += tests/AllTests.cpp
-TEST_SRC_DIRS += tests
+# TEST_SRC_DIRS += tests
+TEST_SRC_DIRS += tests/src
 # TEST_SRC_DIRS += tests/io-cppumock
 # TEST_SRC_DIRS += my_test
 #	tests/example-fff \
@@ -80,7 +81,7 @@ INCLUDE_DIRS += ../src/my_inc
 #
 # This is kind of a kludge, but it causes the
 # .o and .d files to be put under objs.
-CPPUTEST_OBJS_DIR = tests/build/test-obj/1
+CPPUTEST_OBJS_DIR = tests/build/test-obj/test
 
 CPPUTEST_LIB_DIR = tests/build/test-lib
 
