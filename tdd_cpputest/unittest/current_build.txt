@@ -7,5 +7,5 @@ a - tests/build/test-obj/test/../src/my_src/module1.o
 Linking rename_me_tests
 Running rename_me_tests
 .
-OK (1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 1 ms)
+OK (1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 0 ms)
 
