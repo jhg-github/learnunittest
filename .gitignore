@@ -56,3 +56,4 @@ dkms.conf
 /tdd_cpputest/cpputest-starter-project/current_build.txt
 /tdd_cpputest/unittest/current_build.txt
 /tdd_cpputest/unittest/rename_me_tests
+/tdd_cpputest/unittest/binary_tests

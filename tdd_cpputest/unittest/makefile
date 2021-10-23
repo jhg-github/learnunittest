@@ -2,7 +2,7 @@
 SILENCE = @
 
 #---- Outputs ----#
-COMPONENT_NAME = rename_me
+COMPONENT_NAME = binary
 
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
