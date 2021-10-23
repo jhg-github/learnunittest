@@ -38,10 +38,10 @@ SRC_DIRS += my_src
 # TEST_SRC_FILES specifies individual test files to build.
 # TEST_SRC_DIRS, builds everything in the directory
 
-TEST_SRC_FILES += tests/AllTests.cpp
-# TEST_SRC_DIRS += tests
+# TEST_SRC_FILES += tests/AllTests.cpp
+TEST_SRC_DIRS += tests
 # TEST_SRC_DIRS += tests/io-cppumock
-TEST_SRC_DIRS += my_test
+# TEST_SRC_DIRS += my_test
 #	tests/example-fff \
 #	tests/fff \
 
